@@ -1,9 +1,18 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button>
+  <button mat-mini-fab routerLink="/">
     <mat-icon>home</mat-icon>
   </button>
+  <div class="small-spacer"></div>
+  <button class="toolbar-btn" color="accent" mat-raised-button routerLink="usa-basics">USA 101</button>
+  <div class="small-spacer"></div>
+  <button class="toolbar-btn" color="accent" mat-raised-button routerLink="president-elections">Präsidentschaftswahl der USA</button>
+  <div class="small-spacer"></div>
+  <button class="toolbar-btn" color="accent" mat-raised-button routerLink="electoral-college">Electoral College</button>
+  <div class="small-spacer"></div>
+  <button class="toolbar-btn" color="accent" mat-raised-button routerLink="senatory">Das Repräsentantenhaus</button>
+  <div class="small-spacer"></div>
+  <button class="toolbar-btn" color="accent" mat-raised-button routerLink="elections-2024">Wahl in 2024</button>
   <span class="spacer"></span>
-  <button mat-icon-button>
-    <mat-icon>share</mat-icon>
-  </button>
+  <h1>☆☆☆ WAHLSYSTEM DER USA ☆☆☆</h1>
 </mat-toolbar>
+<router-outlet></router-outlet>
