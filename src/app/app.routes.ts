@@ -5,6 +5,7 @@ import {ElectoralCollegeComponent} from "./electoral-college/electoral-college.c
 import {PresidentElectionsComponent} from "./president-elections/president-elections.component";
 import {SenatoryComponent} from "./senatory/senatory.component";
 import {Elections2024Component} from "./elections-2024/elections-2024.component";
+import {QuizComponent} from "./quiz/quiz.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
   {path: 'president-elections', component: PresidentElectionsComponent},
   {path: 'electoral-college', component: ElectoralCollegeComponent},
   {path: 'senatory', component: SenatoryComponent},
-  {path: 'elections-2024', component: Elections2024Component}
+  {path: 'elections-2024', component: Elections2024Component},
+  {path: 'quiz/:id', component: QuizComponent}
 ];

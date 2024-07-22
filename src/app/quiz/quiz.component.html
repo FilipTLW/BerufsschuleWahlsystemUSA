@@ -1,0 +1,29 @@
+<div class="background centered bg">
+  @if (notFound) {
+    <h1>Quiz not found.</h1>
+  } @else {
+    <div class="quiz-background">
+      <h1>{{quizzes[id].title}}</h1>
+      <hr>
+      <p>{{quizzes[id].description}}</p>
+      <hr>
+      <div class="questions">
+        @for (question of quizzes[id].questions; track question.question) {
+          <h3>{{question.question}}</h3>
+          <mat-radio-group>
+            @for (answer of question.answers; track answer) {
+              <mat-radio-button color="primary">
+                {{answer}}
+              </mat-radio-button>
+              <br>
+            }
+          </mat-radio-group>
+        }
+      </div>
+      <hr>
+      <div class="centered">
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+    </div>
+  }
+</div>

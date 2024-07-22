@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+@use '../../usa-theme' as theme;
+
+.bg {
+  color: white;
+  height: max-content;
+  background-repeat: no-repeat;
+  background-color: #030301;
+}
+
+.quiz-background {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: mat.get-color-from-palette(theme.$accent-palette);
+  padding: 20px;
+}
+
+mat-radio-button {
+  --mdc-form-field-label-text-color: white!important;
+}

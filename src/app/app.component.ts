@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -16,4 +16,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  rickroll() {
+    window.location.href = 'https://www.youtube.com/watch?reload=9&v=dQw4w9WgXcQ';
+  }
 }

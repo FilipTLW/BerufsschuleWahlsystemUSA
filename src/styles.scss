@@ -13,3 +13,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .margin-around {
   margin: 20px;
 }
+
+.background {
+  width: 100%;
+  height: calc(100% - 64px);
+  background-image: url("./assets/usa/washington.jpg");
+  background-size: 100% auto;
+}
