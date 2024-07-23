@@ -1,0 +1,37 @@
+<mat-dialog-content>
+  <div class="quiz-background">
+    <h1>{{quizService.quizzes[data.id].title}}</h1>
+    <hr>
+    <p>{{quizService.quizzes[data.id].description}}</p>
+    <hr>
+    @if (percentage >= 0.6) {
+      <h2 class="green">BESTANDEN</h2>
+    } @else {
+      <h2 class="red">NICHT BESTANDEN</h2>
+    }
+    <p>Du hast {{correctCount}} von {{quizService.quizzes[data.id].questions.length}} Fragen richtig beantwortet.</p>
+    <p></p>
+    <hr>
+    <div class="questions">
+      @for (question of quizService.quizzes[data.id].questions; track question.question; let i = $index) {
+        <h3 class="header">
+          {{question.question}}
+          @if (question.correctAnswerIndex === data.answers[i]) {
+            <mat-icon class="checkbox">check_box</mat-icon>
+          }
+        </h3>
+        <mat-radio-group [disabled]="true"  [value]="data.answers[i]">
+          @for (answer of question.answers; track answer) {
+            <mat-radio-button color="primary" [class.correct-answer]="$index == question.correctAnswerIndex" [class.wrong-answer]="$index != question.correctAnswerIndex && $index === data.answers[i]" [value]="$index">
+              {{answer}}
+            </mat-radio-button>
+            <br>
+          }
+        </mat-radio-group>
+      }
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="home()">Home</button>
+</mat-dialog-actions>

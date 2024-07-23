@@ -3,16 +3,16 @@
     <h1>Quiz not found.</h1>
   } @else {
     <div class="quiz-background">
-      <h1>{{quizzes[id].title}}</h1>
+      <h1>{{quizService.quizzes[id].title}}</h1>
       <hr>
-      <p>{{quizzes[id].description}}</p>
+      <p>{{quizService.quizzes[id].description}}</p>
       <hr>
-      <div class="questions">
-        @for (question of quizzes[id].questions; track question.question) {
+      <div class="questions" [formGroup]="formGroup">
+        @for (question of quizService.quizzes[id].questions; track question.question) {
           <h3>{{question.question}}</h3>
-          <mat-radio-group>
+          <mat-radio-group [formControlName]="$index">
             @for (answer of question.answers; track answer) {
-              <mat-radio-button color="primary" [value]="false">
+              <mat-radio-button color="primary" [value]="$index">
                 {{answer}}
               </mat-radio-button>
               <br>
@@ -22,7 +22,7 @@
       </div>
       <hr>
       <div class="centered">
-        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
       </div>
     </div>
   }

@@ -1,0 +1,23 @@
+.correct-answer {
+  --mat-radio-disabled-label-color: lightgreen!important;
+}
+
+.wrong-answer {
+  --mat-radio-disabled-label-color: red!important;
+}
+
+.checkbox {
+  color: lightgreen;
+}
+
+.header {
+  display: flex;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.red {
+  color: red;
+}
