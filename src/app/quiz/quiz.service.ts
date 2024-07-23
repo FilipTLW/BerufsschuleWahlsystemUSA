@@ -197,22 +197,22 @@ export class QuizService {
         "description": "Fragen zur Wahl des Repräsentantenhauses und des Senats in den USA",
         "questions": [
           {
-            "question": "Wie beträgt die Amtszeit der Abgeordneten des Repräsentantenhauses?",
+            "question": "Die Amtsperiode der Abgeordneten des Repräsentantenhauses beträgt... ",
             "answers": [
-              "Alle 2 Jahre",
-              "Alle 4 Jahre",
-              "Alle 5 Jahre",
-              "Alle 6 Jahre"
+              "... 2 Jahre",
+              "... 4 Jahre",
+              "... 5 Jahre",
+              "... 6 Jahre"
             ],
             "correctAnswerIndex": 0
           },
           {
-            "question": "Wie beträgt die Amtszeit der Abgeordneten des Senates?",
+            "question": "Wie Amtsperiode der Abgeordneten des Senates beträgt... ",
             "answers": [
-              "Alle 2 Jahre",
-              "Alle 4 Jahre",
-              "Alle 5 Jahre",
-              "Alle 6 Jahre"
+              "... 2 Jahre",
+              "... 4 Jahre",
+              "... 5 Jahre",
+              "... 6 Jahre"
             ],
             "correctAnswerIndex": 3
           },
