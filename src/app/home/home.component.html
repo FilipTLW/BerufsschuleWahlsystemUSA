@@ -26,6 +26,7 @@
               <p>Aussicht auf die Wahlen 2024</p>
             </div>
           </div>
+          <button [disabled]="completed.length !== 5" class="cert-button" mat-raised-button color="accent" (click)="generatePDF(prompt('Name')!)">Zertifikat Herunterladen</button>
         </mat-card>
       </div>
     </div>
